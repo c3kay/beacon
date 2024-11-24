@@ -4,8 +4,12 @@
     <groupId>de.c3kay</groupId>
     <artifactId>beacon</artifactId>
     <version>1.0.0</version>
-
     <name>beacon</name>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
 
     <repositories>
         <repository>
@@ -22,17 +26,4 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
-                <configuration>
-                    <source>21</source>
-                    <target>21</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
