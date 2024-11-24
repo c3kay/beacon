@@ -1,0 +1,15 @@
+name: BeaconPlugin
+version: 1.0.0
+main: de.c3kay.beacon.BeaconPlugin
+description: Beacon area extender
+author: c3kay
+api-version: '1.21.1'
+permissions:
+  beacon:
+    description: Permits configuration of beacon plugin.
+    default: op
+commands:
+  beacon:
+    description: "Configure the beacon plugin."
+    usage: "/beacon <tier|distance|measure> [value]"
+    permission: beacon
