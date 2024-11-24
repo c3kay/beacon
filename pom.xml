@@ -7,11 +7,6 @@
 
     <name>beacon</name>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>21</maven.compiler.release>
-    </properties>
-
     <repositories>
         <repository>
             <id>papermc</id>
