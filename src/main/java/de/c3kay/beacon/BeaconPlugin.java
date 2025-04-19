@@ -35,7 +35,7 @@ public class BeaconPlugin extends JavaPlugin {
 
         getLogger().info(
                 "Distance: " + getConfig().getInt(DISTANCE_KEY)
-                + " - Tier: " + getConfig().getInt(TIER_KEY)
+                        + " - Tier: " + getConfig().getInt(TIER_KEY)
         );
 
         getServer().getScheduler().scheduleSyncRepeatingTask(
@@ -56,10 +56,10 @@ public class BeaconPlugin extends JavaPlugin {
     /**
      * Plugin command event.
      *
-     * @param sender Command sender
+     * @param sender  Command sender
      * @param command Executed command
-     * @param label Alias for command
-     * @param args Arguments of command
+     * @param label   Alias for command
+     * @param args    Arguments of command
      * @return true if command syntax correct, otherwise false
      */
     @Override
@@ -69,8 +69,8 @@ public class BeaconPlugin extends JavaPlugin {
             // => Config of distance and tier
             if (
                     args.length == 2
-                    && (args[0].equalsIgnoreCase(DISTANCE_KEY)
-                    || args[0].equalsIgnoreCase(TIER_KEY))
+                            && (args[0].equalsIgnoreCase(DISTANCE_KEY)
+                            || args[0].equalsIgnoreCase(TIER_KEY))
             ) {
                 try {
                     int value = Integer.parseInt(args[1]);
@@ -116,10 +116,10 @@ public class BeaconPlugin extends JavaPlugin {
     /**
      * Plugin command autocomplete event.
      *
-     * @param sender Command sender
+     * @param sender  Command sender
      * @param command Executed command
-     * @param label Alias for command
-     * @param args Arguments of command
+     * @param label   Alias for command
+     * @param args    Arguments of command
      * @return List of possible arguments or null if none
      */
     @Override
@@ -166,7 +166,7 @@ public class BeaconPlugin extends JavaPlugin {
         final int distance = getConfig().getInt(DISTANCE_KEY);
         return beacon.getWorld().getPlayers().stream()
                 // Using squared distance to avoid costly root function
-                .filter(player -> player.getLocation().distanceSquared(beacon.getLocation()) <= distance*distance)
+                .filter(player -> player.getLocation().distanceSquared(beacon.getLocation()) <= distance * distance)
                 .toList();
     }
 
@@ -174,7 +174,7 @@ public class BeaconPlugin extends JavaPlugin {
      * Apply primary and secondary potion effects of a beacon to given players.
      * The beacon must be at least MIN_TIER (height of pyramid).
      *
-     * @param beacon The beacon from which the effects should apply.
+     * @param beacon  The beacon from which the effects should apply.
      * @param players The players to which the effects should be applied.
      */
     private void applyBeaconEffectsToPlayers(Beacon beacon, Iterable<Player> players) {
