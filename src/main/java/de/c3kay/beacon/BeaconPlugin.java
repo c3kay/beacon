@@ -16,6 +16,7 @@ import java.util.Optional;
 import java.util.stream.Stream;
 
 
+@SuppressWarnings("unused")
 public class BeaconPlugin extends JavaPlugin {
 
     // When changing please also check config.yml
@@ -63,7 +64,7 @@ public class BeaconPlugin extends JavaPlugin {
      * @return true if command syntax correct, otherwise false
      */
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, Command command, @NotNull String label, @NotNull String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, Command command, @NotNull String label, String @NotNull [] args) {
         if (command.getName().equalsIgnoreCase("beacon") && sender.hasPermission("beacon")) {
             // /beacon <distance|tier> [value]
             // => Config of distance and tier
